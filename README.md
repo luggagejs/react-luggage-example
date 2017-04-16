@@ -3,6 +3,6 @@
 ## Usage
 
 ```sh
-npm i
+npm install
 npm start
 ```
