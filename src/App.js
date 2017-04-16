@@ -27,13 +27,13 @@ const RecipesCollection = withCollection(Recipes)
 class App extends Component {
   render() {
     const credentials = {
-      API_KEY: 'someapikey'
+      APP_KEY: '9jllu8tntncc6ic'
     }
 
     return (
       <Luggage
         collection='recipes'
-        creadentials={credentials}
+        credentials={credentials}
         redirectUrl='/'
       >
         <RecipesCollection />
