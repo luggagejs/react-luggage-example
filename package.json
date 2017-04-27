@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "luggage": "luggagejs/luggage#2.0.6",
+    "luggage": "luggagejs/luggage#2.1.1",
+    "react-luggage": "luggagejs/react-luggage#1.0.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-luggage": "file:../react-luggage"
+    "react-dom": "^15.5.4"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"

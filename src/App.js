@@ -2,41 +2,58 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { Luggage, withCollection } from 'react-luggage'
 
-class Recipes extends React.Component {
+class Todos extends React.Component {
   static propTypes = {
-    recipes: PropTypes.array
+    todos: PropTypes.array.isRequired,
+    collection: PropTypes.object
   }
 
   static defaultProps = {
-    recipes: []
+    todos: []
+  }
+
+  state = {
+    todos: this.props.todos
+  }
+
+  componenWillReceiveProps(props) {
+    this.setState({
+      todos: props.todos
+    })
+  }
+
+  addTodo() {
+    this.props.collection.add({ text: this.todoInput.value })
+    this.todoInput.value = ''
   }
 
   render() {
-    const { recipes } = this.props
+    const { todos } = this.props
 
     return (
-      <div className='recipes'>
-        { recipes.map((recipe, i) => <div key={i}>{recipe.title}</div>) }
+      <div>
+        <input placeholder='New todo' ref={i => { this.todoInput = i }} />
+        <button onClick={this.addTodo.bind(this)}>Add</button>
+        { todos.map((todo, i) => <div key={i}>{todo.text}</div>) }
       </div>
     )
   }
 }
 
-const RecipesCollection = withCollection(Recipes)
+const TodosCollection = withCollection('todos')(Todos)
 
 class App extends Component {
   render() {
     const credentials = {
-      APP_KEY: '9jllu8tntncc6ic'
+      APP_KEY: 'tqx0ze13xl6vawf'
     }
 
     return (
       <Luggage
-        collection='recipes'
         credentials={credentials}
         redirectUrl='/'
       >
-        <RecipesCollection />
+        <TodosCollection />
       </Luggage>
     )
   }
