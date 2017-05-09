@@ -34,13 +34,9 @@ const TodosCollection = withCollection('todos')(Todos)
 
 class App extends Component {
   render() {
-    const credentials = {
-      APP_KEY: 'tqx0ze13xl6vawf'
-    }
-
     return (
       <Luggage
-        credentials={credentials}
+        apiKey='tqx0ze13xl6vawf'
         redirectUrl='/react-luggage-example'
       >
         <TodosCollection />
