@@ -51,7 +51,7 @@ class App extends Component {
     return (
       <Luggage
         credentials={credentials}
-        redirectUrl='/'
+        redirectUrl='/react-luggage-example'
       >
         <TodosCollection />
       </Luggage>
