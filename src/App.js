@@ -12,16 +12,6 @@ class Todos extends React.Component {
     todos: []
   }
 
-  state = {
-    todos: this.props.todos
-  }
-
-  componenWillReceiveProps(props) {
-    this.setState({
-      todos: props.todos
-    })
-  }
-
   addTodo() {
     this.props.collection.add({ text: this.todoInput.value })
     this.todoInput.value = ''
