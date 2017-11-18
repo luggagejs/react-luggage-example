@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://luggagejs.github.io/react-luggage-example",
   "dependencies": {
-    "luggage": "luggagejs/luggage#2.1.1",
+    "luggage": "luggagejs/luggage#2.1.10",
     "react-luggage": "luggagejs/react-luggage#1.0.6",
     "prop-types": "^15.5.8",
     "react": "^15.5.4",
